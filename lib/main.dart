@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mini_moshi_app/app_widget.dart'; // あとで作成
+import 'package:mini_mosi/app_widget.dart'; // あとで作成
 
 // Hiveの初期化なども将来的にここで行う
 Future<void> main() async {

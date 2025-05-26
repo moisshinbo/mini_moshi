@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart'; // ErrorScreenのために追加
-import 'package:mini_moshi_app/core/routing/app_routes.dart';
-import 'package:mini_moshi_app/features/home/screens/home_screen.dart'; // あとで作成
-import 'package:mini_moshi_app/features/test_selection/screens/test_selection_screen.dart'; // あとで作成
+import 'package:mini_mosi/core/routing/app_routes.dart';
+import 'package:mini_mosi/features/home/screens/home_screen.dart'; // あとで作成
+import 'package:mini_mosi/features/test_selection/screens/test_selection_screen.dart'; // あとで作成
 
 final GoRouter appRouter = GoRouter(
   initialLocation: AppRoutes.home, // アプリ起動時の初期画面
@@ -32,6 +32,19 @@ final GoRouter appRouter = GoRouter(
   // エラー画面の定義 (オプション)
   errorBuilder: (context, state) => ErrorScreen(error: state.error),
 );
+
+class AppWidget extends StatelessWidget {
+  const AppWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      routerConfig: appRouter,
+      title: 'Mini Mosi App',
+      theme: ThemeData(useMaterial3: true),
+    );
+  }
+}
 
 // 簡単なエラー画面の例 (core/routing/app_router.dart 内、または別ファイルに定義)
 class ErrorScreen extends StatelessWidget {

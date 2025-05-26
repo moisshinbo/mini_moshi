@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart'; // 画面遷移のためにimport
-import 'package:mini_moshi_app/core/routing/app_routes.dart'; // ルート名をimport
+import 'package:mini_mosi/core/routing/app_routes.dart'; // ルート名をimport
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
